@@ -39,7 +39,7 @@ export default function Navbar() {
     { name: "Educate", href: "/educate" },
     { name: "Whats next", href: "/#whats-next" },
     { name: "Journal", href: "/journal" },
-    { name: "Our Team", href: "#" }
+    { name: "Our Team", href: "/team" }
   ];
 
   return (
