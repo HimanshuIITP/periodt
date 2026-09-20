@@ -245,7 +245,7 @@ export default function FooterCTA({ className }: { className?: string }) {
                   <ul className="flex flex-col gap-[16px]">
                     {["The Cycle", "Myths vs Facts", "Endometriosis", "PCOS"].map((link: string) => (
                       <motion.li key={link} variants={itemVariants}>
-                        <a href="#" className="text-[#4A0E1B] font-inter text-[16px] font-medium opacity-70 hover:opacity-100 transition-opacity">{link}</a>
+                        <a href="/educate" className="text-[#4A0E1B] font-inter text-[16px] font-medium opacity-70 hover:opacity-100 transition-opacity">{link}</a>
                       </motion.li>
                     ))}
                   </ul>

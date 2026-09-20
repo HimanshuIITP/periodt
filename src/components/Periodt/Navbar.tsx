@@ -3,6 +3,10 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+
+const Instagram = ({ size = 24, ...props }: any) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+);
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -82,7 +86,10 @@ export default function Navbar() {
           </ul>
 
           <div className="flex items-center gap-4 shrink-0">
-            <motion.button
+            <motion.a
+              href="https://www.instagram.com/periodt.official_/"
+              target="_blank"
+              rel="noopener noreferrer"
               onMouseEnter={() => setIsNavHovered(true)}
               onMouseLeave={() => setIsNavHovered(false)}
               layout
@@ -94,9 +101,10 @@ export default function Navbar() {
             >
               <motion.span
                 layout
-                className={"font-inter font-medium tracking-[-0.3px] text-white transition-all duration-500 " + (isScrolled ? "text-sm" : "text-base")}
+                className={"font-inter flex items-center gap-2 font-medium tracking-[-0.3px] text-white transition-all duration-500 " + (isScrolled ? "text-sm" : "text-base")}
               >
-                Contact Us
+                <Instagram size={isScrolled ? 16 : 18} />
+                Instagram
               </motion.span>
 
               <motion.div
@@ -113,7 +121,7 @@ export default function Navbar() {
                   <ArrowUpRight className={"text-[#4A0E1B] transition-all duration-500 " + (isScrolled ? "w-3 h-3" : "w-3.5 h-3.5")} />
                 </motion.div>
               </motion.div>
-            </motion.button>
+            </motion.a>
 
             {/* Mobile Menu Toggle */}
             <button
@@ -167,9 +175,10 @@ export default function Navbar() {
             </ul>
 
             <div className="mt-auto">
-              <button className="w-full py-4 rounded-full bg-[#4A0E1B] text-white font-inter font-medium text-lg">
-                Contact Us
-              </button>
+              <a href="https://www.instagram.com/periodt.official_/" target="_blank" rel="noopener noreferrer" className="w-full py-4 rounded-full bg-[#4A0E1B] text-white font-inter flex justify-center items-center gap-2 font-medium text-lg">
+                <Instagram size={20} />
+                Instagram
+              </a>
             </div>
           </motion.div>
         )}
