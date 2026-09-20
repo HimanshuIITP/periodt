@@ -154,6 +154,45 @@ export default function TeamPage() {
         </div>
       </section>
 
+      {/* Our Story Section */}
+      <section className="py-24 px-6 md:px-12 lg:px-24 bg-cream relative overflow-hidden">
+        <div className="max-w-4xl mx-auto">
+          <motion.div 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="flex flex-col gap-8"
+          >
+            <motion.h2 variants={fadeUp} className="headline-xl text-4xl md:text-5xl text-burgundy-dark mb-4 text-center md:text-left">
+              Our Story
+            </motion.h2>
+            
+            <div className="flex flex-col gap-6 text-lg md:text-xl text-burgundy-dark/80 leading-relaxed font-light">
+              <motion.p variants={fadeUp}>
+                We're three friends from different cities who happened to land in the same university, and then in the same room. We have different backgrounds, different personalities and, honestly, different opinions on almost everything. But there was one thing we never disagreed on: the stigma around periods had to go.
+              </motion.p>
+              
+              <motion.p variants={fadeUp}>
+                It struck us how strange it is that something so natural is still whispered about, hidden and shamed. We were tired of it. We wanted period care and period safety to be accessible to everybody, and we wanted to spread awareness while doing something good for the community around us.
+              </motion.p>
+              
+              <motion.p variants={fadeUp}>
+                That's how Periodt began. We're students building this alongside our classes, and we've learned that the most powerful thing we can do is simply start the conversation. We began with underprivileged pockets of NCR, where silence around periods often costs the most, and we're working with schools and NGOs to talk openly, bust myths and replace shame with facts.
+              </motion.p>
+              
+              <motion.p variants={fadeUp}>
+                Because for us, access begins with awareness. We're growing step by step, with one goal: a future where every girl can manage her period with dignity, comfort and confidence.
+              </motion.p>
+              
+              <motion.p variants={fadeUp} className="font-medium text-burgundy mt-4 text-2xl font-serif italic">
+                Periods are natural. Periodt.
+              </motion.p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Values Section */}
       <section className="py-32 px-6 md:px-12 lg:px-24 bg-burgundy text-cream relative overflow-hidden">
         <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 100% 0%, #FDF6EE 0%, transparent 50%)' }} />
